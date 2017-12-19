@@ -39,7 +39,7 @@ Many python dependancies are required for this program to run.
  At first, I was using the 32 bit for software for 64 bit windows, along with 32 bit python, to get it to work with python.
  I may have gotten it to work with everything 64 bit.
  
- To interface to python, I used https://github.com/qpit/thorlabs_apt. You will need to copy APT.dll from the "APT installation path\APT Server" directory to the `thorlabs_apt/thorlabs_apt` directory with `__init__.py`. You may also need to copy APT.dll into thorlabs_apt-master/build/lib/thorlabs_apt. You might find that you have two versions of APT.dll. One is for 32-bit and one is for 64-bit; make sure you choose the file that corresponds to your version of Python. I found the 32-bit APT.dll file at C:\Program Files (x86)\Thorlabs\APT\APT Server. The 64-bit APT.dll file should be at C:\Program Files\Thorlabs\APT\APT Server. Then, you will need to edit the `setup.py` file in thorlabs_apt to copy `APT.dll` to the installation directory when it installs. Including the line `package_data={'': ['APT.dll']}` in the `setup` function call in `setup.py` should work (See https://stackoverflow.com/questions/1612733/including-non-python-files-with-setup-py). Then run `python setup.py install` to install it.
+ To interface to python, I used https://github.com/qpit/thorlabs_apt. You will need to copy APT.dll from the "APT installation path\APT Server" directory to the `thorlabs_apt/thorlabs_apt` directory with `__init__.py`. You may also need to copy APT.dll into thorlabs_apt/build/lib/thorlabs_apt. You might find that you have two versions of APT.dll. One is for 32-bit and one is for 64-bit; make sure you choose the file that corresponds to your version of Python. I found the 32-bit APT.dll file at C:\Program Files (x86)\Thorlabs\APT\APT Server. The 64-bit APT.dll file should be at C:\Program Files\Thorlabs\APT\APT Server. Then, you will need to edit the `setup.py` file in thorlabs_apt to copy `APT.dll` to the installation directory when it installs. Including the line `package_data={'': ['APT.dll']}` in the `setup` function call in `setup.py` should work (See https://stackoverflow.com/questions/1612733/including-non-python-files-with-setup-py). Then run `python setup.py install` to install it.
  
 ## Labjack
  In order to talk to the Labjack T7 Pro used to read the photosensor, the labjack Python for LJM library was used: https://labjack.com/support/software/examples/ljm/python. Follow the directions there to download and install both Python for LJM and the LJM library. You may already have the LJM library.
@@ -60,7 +60,7 @@ You need matplotlib. It can be installed with `pip install matplotlib`.
 
 ## qCamera
 You need to install qCamera, which can be found here: https://bitbucket.org/iontrapgroup/qcamera.
-qCamera has some of its own dependencies. These include matplotlib and Pytables. Pytables also has its own dependencies, numexpr and mock. These can be installed with `pip install numexpr`, `pip install mock`, and `pip install tables`.
+qCamera has some of its own dependencies. These include matplotlib and Pytables. Pytables also has its own dependencies: numexpr and mock. All of these can be installed with `pip install numexpr`, `pip install mock`, and `pip install tables`.
  
 ## qtawesome
  For some of the icons in the GUI, [qtawsome](https://github.com/spyder-ide/qtawesome) was used. This can be installed with

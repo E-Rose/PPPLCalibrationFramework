@@ -51,16 +51,23 @@ Many python dependancies are required for this program to run.
  In order to install pysettings, you will also need to install `logging-bootstrap` by running 
  `pip install git+https://UmSenhorQualquer@bitbucket.org/fchampalimaud/logging-bootstrap.git --upgrade`
  See https://github.com/UmSenhorQualquer/pyforms/issues/12#issuecomment-263016759 for more information.
- Though the documentation specifies PyQt4, you may need to install PyQt5 for Pyforms to work. Before installing PyQt4 or PyQt5, you need to install SIP. This can be done by using ‘pip3 install sip’. To install PyQt4, you can try finding and running the installer for an older version--for example, PyQt4-4.11.4-gpl-Py3.4-Qt5.5.0-x32. (Again, check the bit.) To install PyQt5, you can use ‘pip3 install pyqt5’.
- You should be able to install OpenCV using pip install. Use ‘pip install opencv-python’. Check to make sure you can import cv2.
-You can use ‘pip install visvis’ to install visvis.
+ Though the documentation specifies PyQt4, you may need to install PyQt5 for Pyforms to work. Before installing PyQt4 or PyQt5, you need to install SIP. This can be done by using `pip3 install sip`. To install PyQt4, you can try finding and running the installer for an older version--for example, PyQt4-4.11.4-gpl-Py3.4-Qt5.5.0-x32. (Again, check the bit.) To install PyQt5, you can use `pip3 install pyqt5`.
+ You should be able to install OpenCV using pip install. Use `pip install opencv-python`. Check to make sure you can import cv2.
+You can use `pip install visvis` to install visvis.
  
-## qtawsome
+## matplotlib
+You need matplotlib. It can be installed with `pip install matplotlib`.
+
+## qCamera
+You need to install qCamera, which can be found here: https://bitbucket.org/iontrapgroup/qcamera.
+qCamera has some of its own dependencies. These include matplotlib and Pytables. Pytables also has its own dependencies, numexpr and mock. These can be installed with `pip install numexpr`, `pip install mock`, and `pip install tables`.
+ 
+## qtawesome
  For some of the icons in the GUI, [qtawsome](https://github.com/spyder-ide/qtawesome) was used. This can be installed with
  `pip install qtawesome`
 
 ## pyvisa
-You need to install pyvisa. You should be able to do this with ‘pip install pyvisa’.
+You need to install pyvisa. You should be able to do this with `pip install pyvisa`.
 
 ## Cameralink Framegrabber and FLIR Tau 2 camera
  In order to talk to the [PCI DV C-Link](https://edt.com/product/pci-dv-c-link/) framegrabber, you must download and install the PDV software and drivers from https://edt.com/file-category/pdv/.

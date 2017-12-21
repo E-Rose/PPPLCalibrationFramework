@@ -76,7 +76,7 @@ You need to install pyvisa. You should be able to do this with `pip install pyvi
  The configuration for the Tau2 camera can be found in the `flir` directory in this repository. These must be copied to `C:\EDT\pdv\camera_config`. There is one file for the 8 bit mode on the camera, and one for the 14 bit mode. This calibration program uses the 14 bit mode. The corresponding mode must be selected in the FLIR camera controller GUI before use. The FLIR camera controller GUI can be downloaded from http://www.flir.com/cores/display/?id=51880.
  Also, the correct configuration file must be selected by running the `pdvshow` application. This will let you view the image from the camera and ensure that it is working properly.
  
- #Running the framework
+ # Running the framework
  
  Open the Camera Controller GUI. Go to Video, then to Digital Video settings. Select 8-bit. You can also take a snapshot to verify the camera is connected and working.
  
